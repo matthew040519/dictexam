@@ -16,6 +16,8 @@ class LocationController extends Controller
         if($delete != "")
         {
             location::where('id', $delete)->delete();
+
+            return redirect('dashboard');
         }
 
         $place = location::all();
